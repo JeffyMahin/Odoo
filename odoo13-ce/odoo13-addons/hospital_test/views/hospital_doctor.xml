@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+        <!--LIST/TREE VIEW PART-->
+    <record model="ir.ui.view" id="hospital_doctor_tree">
+        <field name="name">hospital_doctor.list.tree</field>
+        <field name="model">hospital_doctor.list</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="gender"/>
+                <field name="age"/>
+                <field name="degree"/>
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+    <!--FORM VIEW PART-->
+    <record model="ir.ui.view" id="hospital_doctor_form">
+        <field name="name">hospital_doctor.list.form</field>
+        <field name="model">hospital_doctor.list</field>
+        <field name="arch" type="xml">
+            <form>
+                <!--to create a sheet view for the form-->
+                <sheet>
+                    <!--group is added to make to label visible, otherwise it wont-->
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="gender"/>
+                        </group>
+                        <group>
+                            <field name="age"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="degree"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+        <!--SEARCH VIEW IN ODOO-->
+    <!--<record id="hospital_patient_search" model="ir.ui.view">-->
+        <!--<field name="name">hospital_patient.list.search</field>-->
+        <!--<field name="model">hospital_patient.list</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<search string="HospitalPatient">-->
+                <!--<field name="name"/>-->
+                <!--<field name="note"/>-->
+                <!--<separator/>-->
+                <!--<field name="age"/>-->
+                <!--<field name="gender"/>-->
+            <!--</search>-->
+        <!--</field>-->
+    <!--</record>-->
+
+
+
+    <!--ACTION PART CONNECTED TO MENU action attr-->
+    <record id="hospital_doctor_action" model="ir.actions.act_window">
+        <field name="name">Doctors List</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital_doctor.list</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first doctor
+            </p>
+        </field>
+    </record>
+
+
+
+    <!--MENU PART-->
+
+    <menuitem id="hospital_root"
+              name="Hospital"
+              sequence="10"
+    />
+
+    <menuitem id="hospital_doctor_root"
+              name="Doctors"
+              parent="hospital_root"
+              sequence="10"
+    />
+
+    <menuitem id="hospital_doctor_list"
+              name="Doctors List"
+              parent="hospital_doctor_root"
+              sequence="10"
+              action="hospital_doctor_action"
+    />
+    <!--ACTION IS TO CONNECT WITH ACTION PART-->
+
+</odoo>

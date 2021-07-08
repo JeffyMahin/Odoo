@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+        <!--LIST/TREE VIEW PART-->
+    <record model="ir.ui.view" id="hospital_patient_tree">
+        <field name="name">hospital_patient.list.tree</field>
+        <field name="model">hospital_patient.list</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="gender"/>
+                <field name="age"/>
+                <field name="note"/>
+                <field name="doctor_id"/>
+                <field name="patient_type"/>
+                <field name="reference"/>
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+    <!--FORM VIEW PART-->
+    <record model="ir.ui.view" id="hospital_patient_form">
+        <field name="name">hospital_patient.list.form</field>
+        <field name="model">hospital_patient.list</field>
+        <field name="arch" type="xml">
+            <form>
+                <!--to create a sheet view for the form-->
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="reference" readonly="1"/>
+                        </h1>
+                    </div>
+
+
+                    <!--group is added to make to label visible, otherwise it wont-->
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="gender"/>
+                        </group>
+                        <group>
+                            <field name="age"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                    <group>
+                        <field name="doctor_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+        <!--SEARCH VIEW IN ODOO-->
+    <record id="hospital_patient_search" model="ir.ui.view">
+        <field name="name">hospital_patient.list.search</field>
+        <field name="model">hospital_patient.list</field>
+        <field name="arch" type="xml">
+            <search string="HospitalPatient">
+                <field name="name"/>
+                <field name="note"/>
+                <separator/>
+                <field name="age"/>
+                <field name="gender"/>
+            </search>
+        </field>
+    </record>
+
+
+
+    <!--ACTION PART CONNECTED TO MENU action attr-->
+    <record id="hospital_patient_action" model="ir.actions.act_window">
+        <field name="name">Patients List</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital_patient.list</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first patient
+            </p>
+        </field>
+    </record>
+
+
+    <record id="hospital_male_patient_action" model="ir.actions.act_window">
+        <field name="name">Male Patients List</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital_patient.list</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('gender','=','Male')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first patient
+            </p>
+        </field>
+    </record>
+
+
+
+    <!--MENU PART-->
+
+    <menuitem id="hospital_root"
+              name="Hospital"
+    />
+
+    <menuitem id="hospital_patient_root"
+              name="Patients"
+              parent="hospital_root"
+    />
+
+    <menuitem id="hospital_patient_list"
+              name="Patients List"
+              parent="hospital_patient_root"
+              action="hospital_patient_action"
+    />
+
+    <menuitem id="hospital_male_patient_list"
+              name="Male Patients List"
+              parent="hospital_patient_root"
+              action="hospital_male_patient_action"
+    />
+    <!--ACTION IS TO CONNECT WITH ACTION PART-->
+
+</odoo>

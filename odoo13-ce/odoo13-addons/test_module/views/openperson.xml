@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+
+    <record id="test_person_tree_view" model="ir.ui.view">
+        <field name="name">test.person.tree.view</field>
+        <field name="model">test.person</field>
+        <field name="arch" type="xml">
+            <tree string="Address">
+                <field name="name" />
+                <field name="address" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="test_person_form_view" model="ir.ui.view">
+        <field name="name">test.person.form.view</field>
+        <field name="model">test.person</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+                <field name="address" />
+            </form>
+        </field>
+    </record>
+
+        <record id="person_list_action" model="ir.actions.act_window">
+            <field name="name">Test Person</field>
+            <field name="res_model">test.person</field>
+            <!--<field name="search_view_id" ref="account_tag_view_search"/>-->
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Add a new tag
+              </p>
+            </field>
+        </record>
+
+    <!--<record id="person_list_action" model="ir.actions.act_window">-->
+        <!--<field name="name">Name</field>-->
+        <!--<field name="address">Address</field>-->
+        <!--<field name="help" type="html">-->
+            <!--<p class="o_view_nocontent_smiling_face">Add the first person</p>-->
+        <!--</field>-->
+    <!--</record>-->
+    <!--<record id="person_list_action" model="ir.ui.views">-->
+        <!--<field name="name">Address</field>-->
+        <!--<field name="model">test.person</field>-->
+    <!--</record>-->
+
+    <menuitem id="main_test_menu" name="Open Person"/>
+    <menuitem id="test_menu" name="Open Person" parent="main_test_menu" action="person_list_action"/>
+
+</odoo>

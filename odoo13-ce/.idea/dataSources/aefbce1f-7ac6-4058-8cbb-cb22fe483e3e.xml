@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="odoo13-ce@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.9">
+    <root id="1">
+      <ServerVersion>12.7</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="bysl-soft-10">
+      <ObjectId>16385</ObjectId>
+    </database>
+    <database id="3" parent="1" name="odoo13">
+      <ObjectId>22316</ObjectId>
+    </database>
+    <database id="4" parent="1" name="odoo13-ce">
+      <ObjectId>25196</ObjectId>
+      <IntrospectionStateNumber>134</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="5" parent="1" name="postgres">
+      <ObjectId>13463</ObjectId>
+      <Comment>default administrative connection database</Comment>
+    </database>
+    <database id="6" parent="1" name="test">
+      <ObjectId>16387</ObjectId>
+    </database>
+    <database id="7" parent="1" name="test2">
+      <ObjectId>19352</ObjectId>
+    </database>
+    <role id="8" parent="1" name="bysl-soft-10">
+      <ObjectId>16384</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="odoo13">
+      <ObjectId>16386</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="17" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="18" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="19" parent="4" name="information_schema">
+      <ObjectId>13163</ObjectId>
+    </schema>
+    <schema id="20" parent="4" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+    </schema>
+    <schema id="21" parent="4" name="pg_temp_1">
+      <ObjectId>12314</ObjectId>
+    </schema>
+    <schema id="22" parent="4" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+    </schema>
+    <schema id="23" parent="4" name="pg_toast_temp_1">
+      <ObjectId>12315</ObjectId>
+    </schema>
+    <schema id="24" parent="4" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="25" parent="4" name="heap">
+      <ObjectId>2</ObjectId>
+      <Comment>heap table access method</Comment>
+      <Handler>pg_catalog.heap_tableam_handler</Handler>
+      <HandlerId>3</HandlerId>
+    </access-method>
+    <access-method id="26" parent="4" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="4" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="28" parent="4" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="29" parent="4" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="30" parent="4" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="31" parent="4" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <sequence id="32" parent="24" name="base_cache_signaling">
+      <ObjectId>25373</ObjectId>
+      <StateNumber>1165</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="33" parent="24" name="base_document_layout_id_seq">
+      <ObjectId>26259</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="34" parent="24" name="base_import_import_id_seq">
+      <ObjectId>27633</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="35" parent="24" name="base_import_mapping_id_seq">
+      <ObjectId>27621</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="36" parent="24" name="base_import_tests_models_char_id_seq">
+      <ObjectId>27644</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="37" parent="24" name="base_import_tests_models_char_noreadonly_id_seq">
+      <ObjectId>27688</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="38" parent="24" name="base_import_tests_models_char_readonly_id_seq">
+      <ObjectId>27666</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="39" parent="24" name="base_import_tests_models_char_required_id_seq">
+      <ObjectId>27655</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="40" parent="24" name="base_import_tests_models_char_states_id_seq">
+      <ObjectId>27677</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="41" parent="24" name="base_import_tests_models_char_stillreadonly_id_seq">
+      <ObjectId>27699</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="42" parent="24" name="base_import_tests_models_complex_id_seq">
+      <ObjectId>27783</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="43" parent="24" name="base_import_tests_models_float_id_seq">
+      <ObjectId>27772</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="44" parent="24" name="base_import_tests_models_m2o_id_seq">
+      <ObjectId>27710</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="45" parent="24" name="base_import_tests_models_m2o_related_id_seq">
+      <ObjectId>27718</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="46" parent="24" name="base_import_tests_models_m2o_required_id_seq">
+      <ObjectId>27726</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="47" parent="24" name="base_import_tests_models_m2o_required_related_id_seq">
+      <ObjectId>27734</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="48" parent="24" name="base_import_tests_models_o2m_child_id_seq">
+      <ObjectId>27753</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="49" parent="24" name="base_import_tests_models_o2m_id_seq">
+      <ObjectId>27742</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="50" parent="24" name="base_import_tests_models_preview_id_seq">
+      <ObjectId>27761</ObjectId>
+      <StateNumber>1415</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="51" parent="24" name="base_language_export_id_seq">
+      <ObjectId>26201</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="52" parent="24" name="base_language_import_id_seq">
+      <ObjectId>26171</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="53" parent="24" name="base_language_install_id_seq">
+      <ObjectId>26160</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="54" parent="24" name="base_module_uninstall_id_seq">
+      <ObjectId>26193</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="55" parent="24" name="base_module_update_id_seq">
+      <ObjectId>26149</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="56" parent="24" name="base_module_upgrade_id_seq">
+      <ObjectId>26182</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="57" parent="24" name="base_partner_merge_automatic_wizard_id_seq">
+      <ObjectId>26241</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="58" parent="24" name="base_partner_merge_line_id_seq">
+      <ObjectId>26230</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="59" parent="24" name="base_registry_signaling">
+      <ObjectId>25371</ObjectId>
+      <StateNumber>1165</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="60" parent="24" name="base_update_translations_id_seq">
+      <ObjectId>26219</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="61" parent="24" name="bus_bus_id_seq">
+      <ObjectId>28079</ObjectId>
+      <StateNumber>1480</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="62" parent="24" name="bus_presence_id_seq">
+      <ObjectId>28090</ObjectId>
+      <StateNumber>1480</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="63" parent="24" name="calendar_alarm_id_seq">
+      <ObjectId>29624</ObjectId>
+      <StateNumber>1625</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="64" parent="24" name="calendar_attendee_id_seq">
+      <ObjectId>29613</ObjectId>
+      <StateNumber>1625</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="65" parent="24" name="calendar_contacts_id_seq">
+      <ObjectId>29603</ObjectId>
+      <StateNumber>1625</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="66" parent="24" name="calendar_event_id_seq">
+      <ObjectId>29648</ObjectId>
+      <StateNumber>1625</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="67" parent="24" name="calendar_event_type_id_seq">
+      <ObjectId>29635</ObjectId>
+      <StateNumber>1625</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="68" parent="24" name="change_password_user_id_seq">
+      <ObjectId>26124</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="69" parent="24" name="change_password_wizard_id_seq">
+      <ObjectId>26116</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="70" parent="24" name="crm_lead2opportunity_partner_id_seq">
+      <ObjectId>31224</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="71" parent="24" name="crm_lead2opportunity_partner_mass_id_seq">
+      <ObjectId>31244</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="72" parent="24" name="crm_lead_id_seq">
+      <ObjectId>31122</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="73" parent="24" name="crm_lead_lost_id_seq">
+      <ObjectId>31205</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="74" parent="24" name="crm_lead_scoring_frequency_field_id_seq">
+      <ObjectId>31192</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="75" parent="24" name="crm_lead_scoring_frequency_id_seq">
+      <ObjectId>31180</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="76" parent="24" name="crm_lead_tag_id_seq">
+      <ObjectId>31156</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="77" parent="24" name="crm_lost_reason_id_seq">
+      <ObjectId>31169</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="78" parent="24" name="crm_merge_opportunity_id_seq">
+      <ObjectId>31271</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="79" parent="24" name="crm_partner_binding_id_seq">
+      <ObjectId>31213</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="80" parent="24" name="crm_stage_id_seq">
+      <ObjectId>31111</ObjectId>
+      <StateNumber>2011</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="81" parent="24" name="crm_team_id_seq">
+      <ObjectId>29891</ObjectId>
+      <StateNumber>1667</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="82" parent="24" name="decimal_precision_id_seq">
+      <ObjectId>26135</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="83" parent="24" name="digest_digest_id_seq">
+      <ObjectId>30428</ObjectId>
+      <StateNumber>1709</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="84" parent="24" name="digest_tip_id_seq">
+      <ObjectId>30446</ObjectId>
+      <StateNumber>1709</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="85" parent="24" name="email_template_preview_id_seq">
+      <ObjectId>28877</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="86" parent="24" name="fetchmail_server_id_seq">
+      <ObjectId>29803</ObjectId>
+      <StateNumber>1646</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="87" parent="24" name="hms_patient_id_seq">
+      <ObjectId>31078</ObjectId>
+      <StateNumber>1980</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="88" parent="24" name="hr_department_id_seq">
+      <ObjectId>31675</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="89" parent="24" name="hr_departure_wizard_id_seq">
+      <ObjectId>31748</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="90" parent="24" name="hr_employee_category_id_seq">
+      <ObjectId>31657</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="91" parent="24" name="hr_employee_id_seq">
+      <ObjectId>31631</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="92" parent="24" name="hr_job_id_seq">
+      <ObjectId>31689</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="93" parent="24" name="hr_plan_activity_type_id_seq">
+      <ObjectId>31704</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="94" parent="24" name="hr_plan_id_seq">
+      <ObjectId>31715</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="95" parent="24" name="hr_plan_wizard_id_seq">
+      <ObjectId>31740</ObjectId>
+      <StateNumber>2095</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="96" parent="24" name="iap_account_id_seq">
+      <ObjectId>28431</ObjectId>
+      <StateNumber>1526</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="97" parent="24" name="ir_act_window_view_id_seq">
+      <ObjectId>25599</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="98" parent="24" name="ir_actions_id_seq">
+      <ObjectId>25197</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="99" parent="24" name="ir_actions_todo_id_seq">
+      <ObjectId>25636</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="100" parent="24" name="ir_attachment_id_seq">
+      <ObjectId>25655</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="101" parent="24" name="ir_config_parameter_id_seq">
+      <ObjectId>25772</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="102" parent="24" name="ir_cron_id_seq">
+      <ObjectId>25669</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="103" parent="24" name="ir_default_id_seq">
+      <ObjectId>25694</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="104" parent="24" name="ir_demo_failure_id_seq">
+      <ObjectId>25856</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="105" parent="24" name="ir_demo_failure_wizard_id_seq">
+      <ObjectId>25867</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="106" parent="24" name="ir_demo_id_seq">
+      <ObjectId>25848</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="107" parent="24" name="ir_exports_id_seq">
+      <ObjectId>25727</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="108" parent="24" name="ir_exports_line_id_seq">
+      <ObjectId>25739</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="109" parent="24" name="ir_filters_id_seq">
+      <ObjectId>25680</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="110" parent="24" name="ir_logging_id_seq">
+      <ObjectId>25798</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="111" parent="24" name="ir_mail_server_id_seq">
+      <ObjectId>25786</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="112" parent="24" name="ir_model_access_id_seq">
+      <ObjectId>25460</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="113" parent="24" name="ir_model_constraint_id_seq">
+      <ObjectId>25429</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="114" parent="24" name="ir_model_data_id_seq">
+      <ObjectId>25317</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="115" parent="24" name="ir_model_fields_id_seq">
+      <ObjectId>25389</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="116" parent="24" name="ir_model_fields_selection_id_seq">
+      <ObjectId>25415</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="117" parent="24" name="ir_model_id_seq">
+      <ObjectId>25375</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="118" parent="24" name="ir_model_relation_id_seq">
+      <ObjectId>25446</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="119" parent="24" name="ir_module_category_id_seq">
+      <ObjectId>25260</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="120" parent="24" name="ir_module_module_dependency_id_seq">
+      <ObjectId>25300</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="121" parent="24" name="ir_module_module_exclusion_id_seq">
+      <ObjectId>25836</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="122" parent="24" name="ir_module_module_id_seq">
+      <ObjectId>25276</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="123" parent="24" name="ir_property_id_seq">
+      <ObjectId>25812</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="124" parent="24" name="ir_rule_id_seq">
+      <ObjectId>25751</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="125" parent="24" name="ir_sequence_date_range_id_seq">
+      <ObjectId>25498</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="126" parent="24" name="ir_sequence_id_seq">
+      <ObjectId>25487</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="127" parent="24" name="ir_server_object_lines_id_seq">
+      <ObjectId>25625</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="128" parent="24" name="ir_translation_id_seq">
+      <ObjectId>25708</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="129" parent="24" name="ir_ui_menu_id_seq">
+      <ObjectId>25506</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="130" parent="24" name="ir_ui_view_custom_id_seq">
+      <ObjectId>25526</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="131" parent="24" name="ir_ui_view_id_seq">
+      <ObjectId>25540</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="132" parent="24" name="mail_activity_id_seq">
+      <ObjectId>28627</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="133" parent="24" name="mail_activity_type_id_seq">
+      <ObjectId>28600</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="134" parent="24" name="mail_alias_id_seq">
+      <ObjectId>28492</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="135" parent="24" name="mail_blacklist_id_seq">
+      <ObjectId>28662</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="136" parent="24" name="mail_channel_id_seq">
+      <ObjectId>28703</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="137" parent="24" name="mail_channel_partner_id_seq">
+      <ObjectId>28677</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="138" parent="24" name="mail_compose_message_id_seq">
+      <ObjectId>28808</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="139" parent="24" name="mail_followers_id_seq">
+      <ObjectId>28505</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="140" parent="24" name="mail_mail_id_seq">
+      <ObjectId>28643</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="141" parent="24" name="mail_message_id_seq">
+      <ObjectId>28551</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="142" parent="24" name="mail_message_res_partner_needaction_rel_id_seq">
+      <ObjectId>28532</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="143" parent="24" name="mail_message_subtype_id_seq">
+      <ObjectId>28469</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="144" parent="24" name="mail_moderation_id_seq">
+      <ObjectId>28688</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="145" parent="24" name="mail_resend_cancel_id_seq">
+      <ObjectId>28840</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="146" parent="24" name="mail_resend_message_id_seq">
+      <ObjectId>28851</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="147" parent="24" name="mail_resend_partner_id_seq">
+      <ObjectId>28866</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="148" parent="24" name="mail_shortcode_id_seq">
+      <ObjectId>28750</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="149" parent="24" name="mail_template_id_seq">
+      <ObjectId>28731</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="150" parent="24" name="mail_tracking_value_id_seq">
+      <ObjectId>28480</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="151" parent="24" name="mail_wizard_invite_id_seq">
+      <ObjectId>28781</ObjectId>
+      <StateNumber>1530</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="152" parent="24" name="phone_blacklist_id_seq">
+      <ObjectId>29861</ObjectId>
+      <StateNumber>1659</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="153" parent="24" name="portal_share_id_seq">
+      <ObjectId>30104</ObjectId>
+      <StateNumber>1684</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="154" parent="24" name="portal_wizard_id_seq">
+      <ObjectId>30122</ObjectId>
+      <StateNumber>1684</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="155" parent="24" name="portal_wizard_user_id_seq">
+      <ObjectId>30133</ObjectId>
+      <StateNumber>1684</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="156" parent="24" name="report_layout_id_seq">
+      <ObjectId>25875</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="157" parent="24" name="report_paperformat_id_seq">
+      <ObjectId>25886</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="158" parent="24" name="res_bank_id_seq">
+      <ObjectId>26011</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="159" parent="24" name="res_company_id_seq">
+      <ObjectId>25340</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="160" parent="24" name="res_config_id_seq">
+      <ObjectId>26037</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="161" parent="24" name="res_config_installer_id_seq">
+      <ObjectId>26045</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="162" parent="24" name="res_config_settings_id_seq">
+      <ObjectId>26053</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="163" parent="24" name="res_country_group_id_seq">
+      <ObjectId>25919</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="164" parent="24" name="res_country_id_seq">
+      <ObjectId>25897</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="165" parent="24" name="res_country_state_id_seq">
+      <ObjectId>25930</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="166" parent="24" name="res_currency_id_seq">
+      <ObjectId>25329</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="167" parent="24" name="res_currency_rate_id_seq">
+      <ObjectId>26064</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="168" parent="24" name="res_groups_id_seq">
+      <ObjectId>25249</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="169" parent="24" name="res_lang_id_seq">
+      <ObjectId>25943</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="170" parent="24" name="res_partner_autocomplete_sync_id_seq">
+      <ObjectId>29837</ObjectId>
+      <StateNumber>1655</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="171" parent="24" name="res_partner_bank_id_seq">
+      <ObjectId>26023</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="172" parent="24" name="res_partner_category_id_seq">
+      <ObjectId>25960</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="173" parent="24" name="res_partner_id_seq">
+      <ObjectId>25351</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="174" parent="24" name="res_partner_industry_id_seq">
+      <ObjectId>26000</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="175" parent="24" name="res_partner_title_id_seq">
+      <ObjectId>25980</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="176" parent="24" name="res_users_id_seq">
+      <ObjectId>25235</ObjectId>
+      <StateNumber>1164</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="177" parent="24" name="res_users_log_id_seq">
+      <ObjectId>26106</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="178" parent="24" name="reset_view_arch_wizard_id_seq">
+      <ObjectId>25563</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="179" parent="24" name="resource_calendar_attendance_id_seq">
+      <ObjectId>28131</ObjectId>
+      <StateNumber>1488</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="180" parent="24" name="resource_calendar_id_seq">
+      <ObjectId>28120</ObjectId>
+      <StateNumber>1488</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="181" parent="24" name="resource_calendar_leaves_id_seq">
+      <ObjectId>28156</ObjectId>
+      <StateNumber>1488</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="182" parent="24" name="resource_resource_id_seq">
+      <ObjectId>28144</ObjectId>
+      <StateNumber>1488</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="183" parent="24" name="resource_test_id_seq">
+      <ObjectId>28167</ObjectId>
+      <StateNumber>1488</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="184" parent="24" name="sms_cancel_id_seq">
+      <ObjectId>30227</ObjectId>
+      <StateNumber>1689</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="185" parent="24" name="sms_composer_id_seq">
+      <ObjectId>30238</ObjectId>
+      <StateNumber>1689</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="186" parent="24" name="sms_resend_id_seq">
+      <ObjectId>30267</ObjectId>
+      <StateNumber>1689</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="187" parent="24" name="sms_resend_recipient_id_seq">
+      <ObjectId>30256</ObjectId>
+      <StateNumber>1689</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="188" parent="24" name="sms_sms_id_seq">
+      <ObjectId>30203</ObjectId>
+      <StateNumber>1689</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="189" parent="24" name="sms_template_id_seq">
+      <ObjectId>30215</ObjectId>
+      <StateNumber>1689</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="190" parent="24" name="sms_template_preview_id_seq">
+      <ObjectId>30275</ObjectId>
+      <StateNumber>1689</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="191" parent="24" name="snailmail_letter_cancel_id_seq">
+      <ObjectId>29969</ObjectId>
+      <StateNumber>1675</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="192" parent="24" name="snailmail_letter_format_error_id_seq">
+      <ObjectId>29980</ObjectId>
+      <StateNumber>1675</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="193" parent="24" name="snailmail_letter_id_seq">
+      <ObjectId>29958</ObjectId>
+      <StateNumber>1675</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="194" parent="24" name="snailmail_letter_missing_required_fields_id_seq">
+      <ObjectId>29988</ObjectId>
+      <StateNumber>1675</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="195" parent="24" name="utm_campaign_id_seq">
+      <ObjectId>28318</ObjectId>
+      <StateNumber>1514</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="196" parent="24" name="utm_medium_id_seq">
+      <ObjectId>28307</ObjectId>
+      <StateNumber>1514</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="197" parent="24" name="utm_source_id_seq">
+      <ObjectId>28336</ObjectId>
+      <StateNumber>1514</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="198" parent="24" name="utm_stage_id_seq">
+      <ObjectId>28296</ObjectId>
+      <StateNumber>1514</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="199" parent="24" name="utm_tag_id_seq">
+      <ObjectId>28347</ObjectId>
+      <StateNumber>1514</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="200" parent="24" name="web_editor_converter_test_id_seq">
+      <ObjectId>27989</ObjectId>
+      <StateNumber>1424</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="201" parent="24" name="web_editor_converter_test_sub_id_seq">
+      <ObjectId>28000</ObjectId>
+      <StateNumber>1424</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="202" parent="24" name="web_tour_tour_id_seq">
+      <ObjectId>28037</ObjectId>
+      <StateNumber>1429</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="203" parent="24" name="wizard_ir_model_menu_create_id_seq">
+      <ObjectId>25476</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+  </database-model>
+</dataSource>
